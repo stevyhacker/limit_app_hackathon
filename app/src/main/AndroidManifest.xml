@@ -20,7 +20,11 @@
             android:name=".app.MainActivity"
             android:label="@string/title_activity_main" />
         <activity android:name=".app.SignUpActivity" />
-        <activity android:name=".app.CardInputActivity"></activity>
+        <activity android:name=".app.CardInputActivity" />
+        <activity
+            android:name=".app.TabActivity"
+            android:label="@string/title_activity_tab"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <size
+        android:height="@dimen/seek_bar_thumb_size"
+        android:width="5dp"
+        />
+    <solid android:color="#fff"/>
+</shape>

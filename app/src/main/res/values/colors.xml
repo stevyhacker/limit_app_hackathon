@@ -2,5 +2,11 @@
 <resources>
     <color name="colorPrimary">#CBF5FE</color>
     <color name="colorPrimaryDark">#7379FF</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#432C62</color>
+    <color name="green">#338e06</color>
+
+    <color name="seek_bar_background">#ababab</color>
+    <color name="seek_bar_progress">#E62A2A</color>
+    <color name="seek_bar_secondary_progress">#3399CC</color>
+
 </resources>

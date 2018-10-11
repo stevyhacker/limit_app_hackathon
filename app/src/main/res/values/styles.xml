@@ -25,9 +25,23 @@
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="tab_text_appearence" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+
+    </style>
+
     <!--<style name="AppThemeNoActionBar" parent="AppTheme">-->
-        <!--<item name="android:windowActionBar">false</item>-->
-        <!--<item name="windowActionBar">false</item>-->
+    <!--<item name="android:windowActionBar">false</item>-->
+    <!--<item name="windowActionBar">false</item>-->
     <!--</style>-->
 
 </resources>
