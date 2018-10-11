@@ -6,12 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".app.StartActivity">
 
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:paddingTop="80dp"
+        android:text="Welcome to Limit App"
+        android:textColor="#000"
+        android:textFontWeight="800"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="left"
+        android:paddingLeft="16dp"
+        android:text="Personal cost \nreducer"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/startBtn"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="38dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/cards"
+        app:layout_constraintBottom_toTopOf="@+id/startBtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
     <Button
         android:id="@+id/startBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="66dp"
+        android:background="@drawable/standard_button_bg"
+        android:drawableRight="@drawable/right_arrow"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="32dp"
+        android:paddingTop="10dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="10dp"
         android:text="Start"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
