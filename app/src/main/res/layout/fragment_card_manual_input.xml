@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    tools:context=".app.CardManualInputFragment">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="left"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:text="Card information"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="left"
+        android:paddingBottom="16dp"
+        android:text="Card number"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/rouned_edit"
+        android:fontFamily="@font/montserrat"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/name_label" />
+
+    <TextView
+        android:id="@+id/email_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="left"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp"
+        android:text="Card name"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/name_input" />
+
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/email_input"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/rouned_edit"
+        android:fontFamily="@font/montserrat"
+        android:hint=""
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/email_label" />
+
+    <TextView
+        android:id="@+id/password_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="left"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp"
+        android:text="MM"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/email_input" />
+
+    <TextView
+        android:id="@+id/yy_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="left"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp"
+        android:text="YY"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/yy_input"
+        app:layout_constraintLeft_toLeftOf="@+id/yy_input" />
+
+    <TextView
+        android:id="@+id/cvv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="left"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp"
+        android:text="CVV"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/cvv_input"
+        app:layout_constraintLeft_toLeftOf="@+id/cvv_input" />
+
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/mm_input"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@drawable/rouned_edit"
+        android:fontFamily="@font/montserrat"
+        android:hint=""
+        android:inputType="number"
+        android:minEms="5"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/password_label" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/yy_input"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        android:background="@drawable/rouned_edit"
+        android:fontFamily="@font/montserrat"
+        android:hint=""
+        android:inputType="number"
+        android:minEms="5"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/mm_input"
+        app:layout_constraintTop_toBottomOf="@id/password_label" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/cvv_input"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        android:background="@drawable/rouned_edit"
+        android:fontFamily="@font/montserrat"
+        android:hint=""
+        android:inputType="number"
+        android:minEms="5"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/yy_input"
+        app:layout_constraintTop_toBottomOf="@id/password_label" />
+
+
+    <TextView
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/standard_button_bg"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:paddingLeft="32dp"
+        android:paddingTop="16dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="16dp"
+        android:text="Add"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvv_input" />
+
+    <TextView
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="16dp"
+        android:text="Cancel"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvv_input" />
+
+
+</android.support.constraint.ConstraintLayout>

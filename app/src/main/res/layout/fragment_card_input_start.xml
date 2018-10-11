@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    tools:context=".app.CardInputStartFragment">
+
+    <TextView
+        android:id="@+id/scan_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="left"
+        android:paddingTop="40dp"
+        android:paddingBottom="16dp"
+        android:text="Scan your card"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/scan_btn"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/scan"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scan_label" />
+
+    <TextView
+        android:id="@+id/manual_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:gravity="left"
+        android:paddingTop="40dp"
+        android:paddingBottom="16dp"
+        android:text="Or enter your card details manually"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/scan_btn" />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="66dp"
+        android:background="@drawable/standard_button_bg"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="32dp"
+        android:paddingTop="16dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="16dp"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/manual_label" />
+
+</android.support.constraint.ConstraintLayout>

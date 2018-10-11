@@ -4,27 +4,23 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
 import limitapp.me.limitapphackathon.R;
 
-public class StartActivity extends Activity {
+public class SignUpActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sign_up);
+        TextView doneBtn = findViewById(R.id.done_btn);
 
-        setContentView(R.layout.activity_start);
-
-        Button startBtn = findViewById(R.id.startBtn);
-
-        startBtn.setOnClickListener(new View.OnClickListener() {
+        doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(StartActivity.this, SignUpActivity.class));
+                startActivity(new Intent(SignUpActivity.this, CardInputActivity.class));
             }
         });
-
     }
-
 }
