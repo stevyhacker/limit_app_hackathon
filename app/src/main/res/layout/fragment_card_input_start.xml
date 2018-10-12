@@ -12,12 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
-        android:gravity="left"
+        android:gravity="center"
         android:paddingTop="40dp"
         android:paddingBottom="16dp"
         android:text="Scan your card"
         android:textColor="#000"
         android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -35,11 +37,14 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
         android:gravity="left"
+
         android:paddingTop="40dp"
         android:paddingBottom="16dp"
         android:text="Or enter your card details manually"
         android:textColor="#000"
         android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scan_btn" />
 
     <Button
@@ -58,6 +63,7 @@
         android:textColor="#fff"
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/manual_label" />
 
 </android.support.constraint.ConstraintLayout>

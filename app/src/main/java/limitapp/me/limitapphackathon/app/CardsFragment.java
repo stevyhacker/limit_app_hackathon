@@ -40,43 +40,10 @@ public class CardsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_cards, container, false);
-//        mSectionsPagerAdapter = new SectionsPagerAdapter(getActivity().getSupportFragmentManager());
-//        TabLayout tabLayout = v.findViewById(R.id.tabs);
-//        // Set up the ViewPager with the sections adapter.
-//        mViewPager = (ViewPager) v.findViewById(R.id.view_pager);
-//        tabLayout.setupWithViewPager(mViewPager);
-//        mViewPager.setAdapter(mSectionsPagerAdapter);
-//        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-//            @Override
-//            public void onTabSelected(TabLayout.Tab tab) {
-//                if (tab.getPosition() == 0) {
-//                    mViewPager.setCurrentItem(0);
-//                } else {
-//                    mViewPager.setCurrentItem(1);
-//                }
-//            }
-//
-//            @Override
-//            public void onTabUnselected(TabLayout.Tab tab) {
-//
-//            }
-//
-//            @Override
-//            public void onTabReselected(TabLayout.Tab tab) {
-//                if (tab.getPosition() == 0) {
-//                    mViewPager.setCurrentItem(0);
-//                } else {
-//                    mViewPager.setCurrentItem(1);
-//
-//                }
-//            }
-//        });
-//        mViewPager.setCurrentItem(0);
         viewPager = (ViewPager) v.findViewById(R.id.view_pager);
         tabLayout = (TabLayout) v.findViewById(R.id.tabs);
         adapter = new TabAdapter(getActivity().getSupportFragmentManager());
-        adapter.addFragment(new LoyaltyCardsFragment(), "Credit Cards");
+        adapter.addFragment(new CreditCardsFragment(), "Credit Cards");
         adapter.addFragment(new LoyaltyCardsFragment(), "Loyalty Cards");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
