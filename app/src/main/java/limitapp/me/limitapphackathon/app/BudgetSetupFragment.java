@@ -5,8 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,8 +21,10 @@ import limitapp.me.limitapphackathon.R;
 public class BudgetSetupFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
-    private SectionsPagerAdapter mSectionsPagerAdapter;
-    private ViewPager mViewPager;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private TabAdapter adapter;
+
 
     public BudgetSetupFragment() {
         // Required empty public constructor
@@ -36,38 +36,13 @@ public class BudgetSetupFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_budget_setup, container, false);
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getActivity().getSupportFragmentManager());
-        TabLayout tabLayout = v.findViewById(R.id.tabs);
-        // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) v.findViewById(R.id.view_pager);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
-        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                if (tab.getPosition() == 0) {
-                    mViewPager.setCurrentItem(0);
-                } else {
-                    mViewPager.setCurrentItem(1);
-
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-                if (tab.getPosition() == 0) {
-                    mViewPager.setCurrentItem(0);
-                } else {
-                    mViewPager.setCurrentItem(1);
-
-                }
-            }
-        });
+        viewPager = (ViewPager) v.findViewById(R.id.view_pager);
+        tabLayout = (TabLayout) v.findViewById(R.id.tabs);
+        adapter = new TabAdapter(getActivity().getSupportFragmentManager());
+        adapter.addFragment(new MonthlyBudgetFragment(), "Current Month");
+        adapter.addFragment(new MonthlyBudgetFragment(), "Edit Budget");
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
         return v;
     }
 
@@ -108,31 +83,5 @@ public class BudgetSetupFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
-        public SectionsPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            switch (position) {
-                default:
-                    return new MonthlyBudgetFragment();
-                case 1:
-                    return new MonthlyBudgetFragment();
-            }
-        }
-
-        @Override
-        public int getCount() {
-            // Show 2 total pages.
-            return 2;
-        }
-    }
-
 
 }

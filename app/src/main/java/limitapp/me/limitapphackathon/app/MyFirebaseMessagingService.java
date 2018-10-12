@@ -1,6 +1,6 @@
 package limitapp.me.limitapphackathon.app;
 
-import android.support.v4.app.NotificationCompat;
+import android.app.Notification;
 import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
 
@@ -18,7 +18,6 @@ public class MyFirebaseMessagingService extends com.google.firebase.messaging.Fi
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        // ...
 
         // TODO(developer): Handle FCM messages here.
         // Not getting messages here? See why this may be: https://goo.gl/39bRNJ
@@ -43,11 +42,11 @@ public class MyFirebaseMessagingService extends com.google.firebase.messaging.Fi
     }
 
     private void handleNow(RemoteMessage remoteMessage) {
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.mipmap.ic_launcher_round)
+        Notification.Builder mBuilder = new Notification.Builder(this)
+                .setSmallIcon(R.drawable.icon_notification)
                 .setContentTitle(remoteMessage.getFrom())
                 .setContentText(remoteMessage.getData().get("body"))
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                .setPriority(Notification.PRIORITY_MAX);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
 

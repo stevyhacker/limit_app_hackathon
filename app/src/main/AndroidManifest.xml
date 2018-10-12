@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/app_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".app.StartActivity">
@@ -25,10 +25,10 @@
             android:name=".app.TabActivity"
             android:label="@string/title_activity_tab"
             android:theme="@style/AppTheme.NoActionBar" />
-        <service
-            android:name=".app.MyFirebaseInstanceIDService">
+
+        <service android:name=".app.MyFirebaseInstanceIDService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
         <service android:name=".app.MyFirebaseMessagingService">
