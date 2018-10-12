@@ -3,6 +3,7 @@ package limitapp.me.limitapphackathon.app;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,7 @@ public class CreditCardsFragment extends Fragment {
 
 
     private OnListFragmentInteractionListener mListener;
+    private FragmentTransaction transaction;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -43,10 +45,15 @@ public class CreditCardsFragment extends Fragment {
         View view = inflater.inflate(R.layout.credit_cards, container, false);
 
 
-            Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.credit_cards_list);
+        final Context context = view.getContext();
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.credit_cards_list);
 
-            recyclerView.setAdapter(new CreditCardsRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+        recyclerView.setAdapter(new CreditCardsRecyclerViewAdapter(DummyContent.ITEMS, new LoyaltyCardsFragment.OnListFragmentInteractionListener() {
+            @Override
+            public void onListFragmentInteraction(DummyItem item) {
+                ((MainActivity)getActivity()).openDetails();
+            }
+        }));
 
         return view;
     }

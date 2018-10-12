@@ -71,4 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void openDetails() {
+        transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, new CardDetailsFragment());
+        transaction.commitAllowingStateLoss();
+    }
+
 }
