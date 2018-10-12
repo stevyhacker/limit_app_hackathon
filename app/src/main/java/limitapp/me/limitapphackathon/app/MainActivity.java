@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_notifications:
                     transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.fragment_container, new CardManualInputFragment());
+                    transaction.replace(R.id.fragment_container, new HistoryItemFragment());
                     transaction.commitAllowingStateLoss();
                     return true;
             }

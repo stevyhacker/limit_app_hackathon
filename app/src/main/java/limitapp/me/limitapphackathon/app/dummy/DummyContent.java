@@ -22,6 +22,8 @@ public class DummyContent {
      * A map of sample (dummy) items, by ID.
      */
     public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
+    public static final List<DummyItem> YEARS = new ArrayList<DummyItem>();
+    public static final List<DummyItem> MONTHS = new ArrayList<DummyItem>();
 
     private static final int COUNT = 15;
 
@@ -38,6 +40,32 @@ public class DummyContent {
         for (int i = ITEMS.size(); i <= COUNT; i++) {
             addItem(createDummyItem(i));
         }
+
+        YEARS.add(new DummyItem("2010", "Total", "650"));
+        YEARS.add(new DummyItem("2011", "Food", "150"));
+        YEARS.add(new DummyItem("2012", "Rent", "0"));
+        YEARS.add(new DummyItem("2013", "Clothing", "160"));
+        YEARS.add(new DummyItem("2014", "Transportation", "40"));
+        YEARS.add(new DummyItem("2015", "Education", "40"));
+        YEARS.add(new DummyItem("2016", "Entertainment", "50"));
+        YEARS.add(new DummyItem("2017", "Entertainment", "50"));
+        YEARS.add(new DummyItem("2018", "Entertainment", "50"));
+
+
+        MONTHS.add(new DummyItem("Jan", "Total", "650"));
+        MONTHS.add(new DummyItem("Feb", "Food", "150"));
+        MONTHS.add(new DummyItem("Mar", "Rent", "0"));
+        MONTHS.add(new DummyItem("Apr", "Clothing", "160"));
+        MONTHS.add(new DummyItem("May", "Transportation", "40"));
+        MONTHS.add(new DummyItem("Jun", "Education", "40"));
+        MONTHS.add(new DummyItem("Jul", "Entertainment", "50"));
+        MONTHS.add(new DummyItem("Aug", "Entertainment", "50"));
+        MONTHS.add(new DummyItem("Sep", "Entertainment", "50"));
+        MONTHS.add(new DummyItem("Oct", "Entertainment", "50"));
+        MONTHS.add(new DummyItem("Nov", "Entertainment", "50"));
+        MONTHS.add(new DummyItem("Dec", "Entertainment", "50"));
+
+
     }
 
     private static void addItem(DummyItem item) {
