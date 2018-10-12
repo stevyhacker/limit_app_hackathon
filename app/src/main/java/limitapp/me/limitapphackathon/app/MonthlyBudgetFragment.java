@@ -35,7 +35,7 @@ public class MonthlyBudgetFragment extends Fragment {
     public MonthlyBudgetFragment() {
     }
 
-    @SuppressWarnings("unused")
+
     public static MonthlyBudgetFragment newInstance(int columnCount) {
         MonthlyBudgetFragment fragment = new MonthlyBudgetFragment();
         Bundle args = new Bundle();
@@ -67,7 +67,7 @@ public class MonthlyBudgetFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new ItemBudgetRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new ItemBudgetRecyclerViewAdapter(DummyContent.ITEMS, mListener, getContext()));
         }
         return view;
     }

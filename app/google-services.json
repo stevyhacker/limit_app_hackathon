@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "633457310053",
+    "firebase_url": "https://limit-af38b.firebaseio.com",
+    "project_id": "limit-af38b",
+    "storage_bucket": "limit-af38b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633457310053:android:33935c3121d004e6",
+        "android_client_info": {
+          "package_name": "limitapp.me.limitapphackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633457310053-rjmi3iik11p6f1rj45gt6g9i1p7m3rkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCotfwsaIAFkNj7hOe4JtUFr5fo-nB2CD0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

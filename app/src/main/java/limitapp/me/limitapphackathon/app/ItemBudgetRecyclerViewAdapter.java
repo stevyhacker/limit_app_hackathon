@@ -1,5 +1,6 @@
 package limitapp.me.limitapphackathon.app;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -23,10 +24,12 @@ public class ItemBudgetRecyclerViewAdapter extends RecyclerView.Adapter<ItemBudg
 
     private final List<DummyItem> mValues;
     private final OnListFragmentInteractionListener mListener;
+    Context context;
 
-    public ItemBudgetRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public ItemBudgetRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener, Context context) {
         mValues = items;
         mListener = listener;
+        this.context = context;
     }
 
     @Override
@@ -78,6 +81,10 @@ public class ItemBudgetRecyclerViewAdapter extends RecyclerView.Adapter<ItemBudg
             holder.slider.setProgress((int) ((Float.valueOf(mValues.get(position).details) / Float.valueOf(mValues.get(position).id)) * 100));
         } catch (ArithmeticException e) {
             e.printStackTrace();
+        }
+
+        if (holder.mContentView.getText().toString().equalsIgnoreCase("Total")) {
+            holder.mView.setBackgroundColor(context.getResources().getColor(R.color.colorPrimary));
         }
     }
 

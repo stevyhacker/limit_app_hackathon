@@ -123,7 +123,7 @@ public class BudgetSetupFragment extends Fragment {
                 default:
                     return new MonthlyBudgetFragment();
                 case 1:
-                    return new EditBudgetFragment();
+                    return new MonthlyBudgetFragment();
             }
         }
 
